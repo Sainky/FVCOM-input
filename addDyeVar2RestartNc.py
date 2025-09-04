@@ -2,7 +2,7 @@
 """
 Created on Thu Sep  4 22:01:27 2025
 
-@author: XZhou
+@author: XZhou @QIMG (QD. CN) & NIVA (Bgn. NOR)
 """
 
 import netCDF4 as nc
@@ -22,5 +22,6 @@ dye_var[:] = np.zeros((num_time, num_siglay, num_node))
 
 dye_var.long_name = 'dye concentration'
 dye_var.units = 'nondimensional'
+
 
 hotstart_file.close()
