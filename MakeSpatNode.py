@@ -6,10 +6,6 @@ Created on Fri Sep  5 08:31:59 2025
 """
 
 import numpy as np
-from matplotlib.path import Path
-from shapely.geometry import Point, Polygon
-import os
-import matplotlib.pyplot as plt
 
 def findAreaNodes(fpath,meshfnm,marks):
     nodes = []
@@ -26,8 +22,9 @@ def findAreaNodes(fpath,meshfnm,marks):
     nodes_len = len(nodes)
     return nodes_str,nodes_len
 #%% 
-fpath = r'E:\ProgramData\PyProgram\SGW\\'
-meshfnm = 'SgBay_dyearea.2dm'
-M_SPERCIFY, M_SPEDYE = findAreaNodes(fpath,meshfnm,marks=100)    
-print(M_SPEDYE)
+fpath = r'Inputfile_path//'
+meshfnm = 'MarkedDepthMesh.2dm'
+M_SPERCIFY, M_SPEDYE = findAreaNodes(fpath,meshfnm,marks=100)  #eg. marks depth eaual to 100  
+print(M_SPEDYE)#M_SPEDYE is node numbers, M_SPERCIFY is a string within comma can be copied to nml file
+
 
